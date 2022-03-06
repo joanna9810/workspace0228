@@ -17,5 +17,7 @@ a, b = 1, 2
 입력값 쓸 때 띄어쓸 것!
 '''
 a, b = input().split()
-print(a)
-print(b)
+print(a,b)
+
+a,b = map(int,input().split(" "))
+print(a,b)
