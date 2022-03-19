@@ -1,8 +1,8 @@
 #다음과 같이 import를 사용할 수 있습니다.
 import math
 
-def solution(scores1):
-    return (sum(scores1)- max(scores1)- min(scores1)) // len((scores1)-2)
+def solution(scores):
+    return (sum(scores)- max(scores)- min(scores)) // (len(scores)-2)
 
 
 

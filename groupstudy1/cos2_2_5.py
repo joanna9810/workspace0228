@@ -1,11 +1,11 @@
 def solution(attack, recovery, hp):
     count = 0
-    while(True):
-        count += @@@
-        hp -= @@@
+    while(True): # 무한 반복
+        count += 1
+        hp -= attack
         if hp <= 0:
-            @@@
-        hp += @@@
+            break   # 무한 반복을 멈추게 함
+        hp += recovery
     return count
 
 #아래는 테스트케이스 출력을 해보기 위한 코드입니다.
