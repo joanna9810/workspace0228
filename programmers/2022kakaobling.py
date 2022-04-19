@@ -7,7 +7,7 @@ report = ["muzi frodo","apeach frodo","frodo neo","muzi neo","apeach muzi"]
 for i in set(report):
     report = i.split(' ')
     dicReports[report[1]].append(report[0])
-    print(dicReports)
+print(dicReports)
 
 
 
