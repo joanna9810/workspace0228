@@ -8,13 +8,13 @@ N개의 수가 주어졌을 때, 이를 오름차순으로 정렬하는 프로�
 출력
 첫째 줄부터 N개의 줄에 오름차순으로 정렬한 결과를 한 줄에 하나씩 출력한다.
 '''
-N = int(input())
+N= int(input())
 n_list = []
 for i in range(1, N+1):
-   n_list.append(int(input()))
+    n_list.append(int(input()))
 n_list1 = sorted(n_list)
 for i in range(len(n_list1)):
-   print(n_list1[i])
+    print(n_list1[i])
 
 
 
