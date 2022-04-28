@@ -39,14 +39,15 @@ for i in range(N):
     start_time, end_time = map(int, input().split())
     meeting_time.append([start_time, end_time])
     meeting_time = sorted(meeting_time, key=lambda x: (x[0], x[1]))
+print(meeting_time)
 
 cnt = 0
-last = 0
+last = 0 # 가장 최근에 보고 있는 강의 
 for i,j in meeting_time:
-    if i >= last:
+    if i >= last: # 강의 i 와 last 가 겹치지 않게
         cnt += 1
         last = j
-print(cnt)
+
 
 
 
