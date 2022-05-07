@@ -5,7 +5,7 @@ from collections import deque
 dx = [-1,1,0,0,-1,+1,-1,+1]
 dy = [0,0,-1,1,-1,-1,+1,+1]
 # BFS 소스 구현
-def bfs(x,y):
+def bfs(y, x):
     # queue 구현을 위해 deque 라이브러리 사용
     queue = deque()
     queue.append((y,x))
@@ -35,7 +35,7 @@ while True:
     graph = []
     for i in range(h):
         graph.append(list(map(int, input().split())))
-    # 가장 오른쪽 아래까지의 최단 거리 반환
+# 가장 오른쪽 아래까지의 최단 거리 반환
 
 result = 0
 for i in range(h):
