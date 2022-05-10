@@ -23,17 +23,18 @@ def dfs(v):
 #bfs
 def bfs(v):
     # 방문해야 할 곳을 순서대로 넣을 큐
-    queue = [v]
+    q = deque()
+    q.append(v)
     # dfs 를 완료한 visited (1로 되어있음)에서 0으로 방문체크
-    visit_list[v] = 0
+    visit_list[v] = 1
     # 큐 안에 데이터가 없을 떄 까지
-    while queue:
-        v = queue.pop(0)
+    while q:
+        v = q.popleft()
         print(v, end='')
         for i in range(1, n+1):
-            if(visit_list2[i] == 1 and graph[v][i] == 1):
-                queue.append(i)
-                visit_list[i] = 0
+            if(visit_list[i] == 0 and graph[v][i] == 1):
+                q.append(i)
+                visit_list[i] = 1
 
 # 각 노드가 연결된 정보를 표현
 n, m, v= map(int, input().split())
