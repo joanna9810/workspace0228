@@ -1,4 +1,4 @@
-from _collections import deque
+from collections import deque
 
 # contact 매서드 정의
 def contact(current_q):
@@ -19,8 +19,9 @@ def contact(current_q):
         contact(next_q)
 
 for tc in range(1,11):
-    n, start = map(int, input().split())
+    n = map(int, input().split())
     # 인접 리스트를 만든다
+    adj_list = list(map(int, input().split()))
     adj = {i:[] for i in range(1,101)}
     for i in range(0,n,2):
         adj[adj_list[i]].append(adj_list[i+1])
