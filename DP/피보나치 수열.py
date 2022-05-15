@@ -1,7 +1,14 @@
 # 단순 재귀 소스코드
 
-def fibo(x):
-    if x == 1 or x == 2:
+def fib(n):
+    if n == 0:
+        return 0
+    elif n == 1 or n == 2:
         return 1
-    return fibo(x-1) + fibo(x-2)
-print(fibo(4))
+    else:
+        return fib(n - 1) + fib(n - 2)
+
+n = int(input())
+
+print('Fibonacci({}): {}'.format(n, fib(n)))
+
