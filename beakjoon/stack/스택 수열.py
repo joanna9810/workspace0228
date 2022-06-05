@@ -47,31 +47,34 @@
 -
 '''
 
+import sys
+
 cnt, stack, result = 1, [], []
 flag = True
+input = sys.stdin.readline().rstrip()
 
 n = int(input())
-for i in range(n):
-    num = int(input())
+targets = [int(input()) for _ in range(n)]
 
-    while cnt <= num: # 0 <= 4 일 경우 push 한후 stack 에 저장
-        stack.append(num)
+for target in targets:
+    while cnt <= target: # 0 <= 4 일 경우 push 한후 stack 에 저장
+        stack.append(cnt)
         result.append('+')
         cnt += 1
 
     # stack에 있는 마지막 값이 num 와 같다면 pop 한다
-    if stack[-1] == num:
+    if stack[-1] == target:
         stack.pop()
         result.append('-')
 
-    # stack 마지막 값이 num 과 같지 않다면 수열 성립 하지 않는다
+    # # stack 마지막 값이 num 과 같지 않다면 수열 성립 하지 않는다
     else:
         flag = False
+        exit(0)
 
 if not flag:
     print("No")
 else:
-    for i in result:
-        print(i)
+    print("\n".join(result))
 
 
