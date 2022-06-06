@@ -32,11 +32,13 @@
 (1,4), (5,7), (8,11), (12,14) 를 이용할 수 있다.
 '''
 
-N = int(input())
+import sys
+
+N = int(sys.stdin.readline())
 meeting_time = []
 
 for i in range(N):
-    start_time, end_time = map(int, input().split())
+    start_time, end_time = map(int, sys.stdin.readline().split())
     meeting_time.append([start_time, end_time])
     meeting_time = sorted(meeting_time, key=lambda x: (x[0], x[1]))
 print(meeting_time)
