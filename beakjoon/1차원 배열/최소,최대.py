@@ -23,6 +23,6 @@ b = sorted(a)
 
 '------------------------------------------'
 
-print(min(a), max(b))
+print(min(a), max(a))
 
 
